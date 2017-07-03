@@ -35,9 +35,11 @@ $(function() {
             for (let i = 0; i < cats.length; i++) {
                 $(".catlist").append('<button id=' + cats[i].name + '>' + cats[i].name +'</button>');
                 $('#' + cats[i].name).click(function() {
+                    //console.log(cats);
+                    //console.log(i);
                     view.render(cats[i]);
                     view.currentCat = i;
-                    console.log(view.currentCat);
+                    //console.log(view.currentCat);
                 })
             }
             $('.catPic').click(function() {
@@ -56,4 +58,4 @@ $(function() {
     controller.init();
 
     
-}());
+})
